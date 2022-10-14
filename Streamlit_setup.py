@@ -236,7 +236,7 @@ st.plotly_chart(fig8,use_container_width=True)
 
 
 #___________________________________________________________________________________________________________
-
+st.header("Hoeveelheid automerken totaal verkocht")
 
 hoeveelheidmerken = rdw['Merk'].value_counts()
 hoeveelheidmerken = hoeveelheidmerken.iloc[::-1]
@@ -263,7 +263,7 @@ st.plotly_chart(tig2,use_container_width=True)
 
 #___________________________________________________________________________________________________________
 
-
+st.header("interactieve map van alle laadpalen OpenChargeMap")
 
 kaart = px.scatter_mapbox(ocm, lat=ocm["AddressInfo.Latitude"], lon=ocm["AddressInfo.Longitude"], hover_name="ID", hover_data=["AddressInfo.Title", "AddressInfo.Town" ],
                         color_discrete_sequence=["fuchsia"], zoom=10, height=1000, title = "Map Laadpaal")
